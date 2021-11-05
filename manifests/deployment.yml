@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: xxxxjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: xxxxjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: xxxxjavascriptdocker 
+    spec:
+      containers:
+        - name: xxxxjavascriptdocker 
+          image: xxxxacr.azurecr.io/xxxxjavascriptdocker
+          ports:
+          - containerPort: 8080
